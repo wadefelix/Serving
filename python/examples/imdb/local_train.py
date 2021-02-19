@@ -18,6 +18,8 @@ import paddle
 import logging
 import paddle.fluid as fluid
 
+paddle.enable_static()
+
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("fluid")
 logger.setLevel(logging.INFO)
@@ -47,7 +49,7 @@ if __name__ == "__main__":
     dataset = fluid.DatasetFactory().create_dataset()
     filelist = ["train_data/%s" % x for x in os.listdir("train_data")]
     dataset.set_use_var([data, label])
-    pipe_command = "python imdb_reader.py"
+    pipe_command = "python3 imdb_reader.py"
     dataset.set_pipe_command(pipe_command)
     dataset.set_batch_size(128)
     dataset.set_filelist(filelist)
