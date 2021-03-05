@@ -16,6 +16,7 @@ from .image_reader import ImageReader, File2Image, URL2Image, Sequential, Normal
 from .image_reader import CenterCrop, Resize, Transpose, Div, RGB2BGR, BGR2RGB, ResizeByFactor
 from .image_reader import RCNNPostprocess, SegPostprocess, PadStride, BlazeFacePostprocess
 from .image_reader import DBPostProcess, FilterBoxes, GetRotateCropImage, SortedBoxes
+from .image_reader import Lambda
 from .lac_reader import LACReader
 from .senta_reader import SentaReader
 #from .imdb_reader import IMDBDataset
